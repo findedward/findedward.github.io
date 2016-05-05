@@ -11,6 +11,12 @@ $(document).ready(function(){
     	    isAndroid  = useragent.match(/android/i) == "android",
     	    isCE       = useragent.match("/windows ce/i") == "windows ce",
     	    isWM       = useragent.match(/windows mobile/i) == "windows mobile";
+            
+        if (isAndroid) {
+            alert("android");
+        } else if (isIPhoneOs || isIPad) {
+            alert("ios");
+        }
 
     	if (isIPad || isIPhoneOs || isMidp || isUc7 || isUc || isAndroid || isCE || isWM) {
     		$("#video-bkg-hd").attr({
